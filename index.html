@@ -1,0 +1,72 @@
+export default function TerraVitaeNova() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-amber-50 text-gray-800">
+      <header className="max-w-6xl mx-auto px-6 py-12">
+        <h1 className="text-5xl font-bold tracking-tight">Terra Vitae Nova</h1>
+        <p className="mt-4 text-xl max-w-2xl">
+          Een levende levensbeschouwing voor vrije liefde, vitaliteit en duurzaamheid –
+          geworteld in aarde, gericht op de toekomst.
+        </p>
+      </header>
+
+      <main className="max-w-6xl mx-auto px-6 space-y-20">
+        <section className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-3xl font-semibold">Onze kern</h2>
+            <ul className="mt-4 space-y-3 text-lg list-disc list-inside">
+              <li>Vrije liefde & verbondenheid</li>
+              <li>Vitaliteit van lichaam en geest</li>
+              <li>Duurzaam leven in harmonie met de aarde</li>
+              <li>Bewuste gemeenschap & rituelen</li>
+            </ul>
+          </div>
+          <div className="bg-white rounded-2xl shadow p-6">
+            <p className="text-lg">
+              Terra Vitae Nova is geen dogma, maar een uitnodiging.
+              Geen regels, wel richting. Geen waarheid, maar waarheidservaring.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-3xl font-semibold">Het Manifest</h2>
+          <p className="mt-4 text-lg max-w-3xl">
+            In het manifest beschrijven we hoe liefde, aarde en toekomst samenkomen
+            in een nieuwe manier van leven. Praktisch, poëtisch en toepasbaar.
+          </p>
+          <button className="mt-6 px-6 py-3 rounded-xl bg-green-600 text-white text-lg hover:bg-green-700 transition">
+            Lees het manifest
+          </button>
+        </section>
+
+        <section className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: 'Rituelen', text: 'Momenten om te verbinden, te vieren en los te laten.' },
+            { title: 'Gemeenschap', text: 'Samen leven, leren en liefhebben.' },
+            { title: 'Toekomst', text: 'Een visie voorbij vandaag – regeneratief en liefdevol.' },
+          ].map((item) => (
+            <div key={item.title} className="bg-white rounded-2xl shadow p-6">
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="mt-2">{item.text}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="bg-green-700 text-white rounded-3xl p-10 text-center">
+          <h2 className="text-3xl font-semibold">Doe mee</h2>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Terra Vitae Nova groeit met mensen die voelen dat het anders kan.
+            Zachter. Vrijer. Levendiger.
+          </p>
+          <button className="mt-6 px-6 py-3 rounded-xl bg-white text-green-700 text-lg hover:bg-green-100 transition">
+            Sluit je aan
+          </button>
+        </section>
+      </main>
+
+      <footer className="mt-24 py-10 text-center text-sm text-gray-600">
+        © {new Date().getFullYear()} Terra Vitae Nova · Liefde voor aarde en leven
+      </footer>
+    </div>
+  );
+}
