@@ -1,70 +1,113 @@
 export default function TerraVitaeNova() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-amber-50 text-gray-800">
-      <header className="max-w-6xl mx-auto px-6 py-12">
-        <h1 className="text-5xl font-bold tracking-tight">Terra Vitae Nova</h1>
-        <p className="mt-4 text-xl max-w-2xl">
-          Een levende levensbeschouwing voor vrije liefde, vitaliteit en duurzaamheid –
-          geworteld in aarde, gericht op de toekomst.
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-stone-50 to-amber-50 text-gray-800">
+      {/* HERO */}
+      <header className="relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 py-24">
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tight">
+            Terra Vitae Nova
+          </h1>
+          <p className="mt-6 text-2xl max-w-3xl">
+            Een levende levensbeschouwing voor mensen die voelen dat het anders kan.
+            Vrije liefde, vitaliteit en duurzaamheid — geworteld in de aarde,
+            gericht op een menswaardige toekomst.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a href="#manifest" className="px-8 py-4 rounded-2xl bg-emerald-700 text-white text-lg hover:bg-emerald-800 transition">
+              Ontdek het manifest
+            </a>
+            <a href="#meedoen" className="px-8 py-4 rounded-2xl bg-white text-emerald-700 text-lg border border-emerald-200 hover:bg-emerald-50 transition">
+              Sluit je aan
+            </a>
+          </div>
+        </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 space-y-20">
-        <section className="grid md:grid-cols-2 gap-10 items-center">
+      <main className="max-w-6xl mx-auto px-6 space-y-32">
+        {/* WAAROM */}
+        <section className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <h2 className="text-3xl font-semibold">Onze kern</h2>
-            <ul className="mt-4 space-y-3 text-lg list-disc list-inside">
-              <li>Vrije liefde & verbondenheid</li>
-              <li>Vitaliteit van lichaam en geest</li>
-              <li>Duurzaam leven in harmonie met de aarde</li>
-              <li>Bewuste gemeenschap & rituelen</li>
-            </ul>
-          </div>
-          <div className="bg-white rounded-2xl shadow p-6">
-            <p className="text-lg">
-              Terra Vitae Nova is geen dogma, maar een uitnodiging.
-              Geen regels, wel richting. Geen waarheid, maar waarheidservaring.
+            <h2 className="text-4xl font-semibold">Waarom Terra Vitae Nova?</h2>
+            <p className="mt-6 text-xl leading-relaxed">
+              We leven in een tijd van overvloed én uitputting. Veel systemen zijn
+              efficiënt, maar niet bezield. Terra Vitae Nova is ontstaan vanuit
+              een eenvoudig verlangen: opnieuw leren leven in verbinding — met
+              jezelf, met elkaar en met de aarde.
             </p>
+            <p className="mt-4 text-xl leading-relaxed">
+              Geen religie, geen dogma. Wel richting, bedding en ruimte om jouw
+              eigen waarheid te ervaren.
+            </p>
+          </div>
+          <div className="bg-white rounded-3xl shadow-xl p-10">
+            <h3 className="text-2xl font-semibold">Onze kernwaarden</h3>
+            <ul className="mt-6 space-y-4 text-lg">
+              <li>🌱 Leven in harmonie met de aarde</li>
+              <li>❤️ Vrije, bewuste liefde en verbinding</li>
+              <li>🔥 Vitaliteit van lichaam, hart en geest</li>
+              <li>🌍 Gemeenschap boven individualisme</li>
+            </ul>
           </div>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold">Het Manifest</h2>
-          <p className="mt-4 text-lg max-w-3xl">
-            In het manifest beschrijven we hoe liefde, aarde en toekomst samenkomen
-            in een nieuwe manier van leven. Praktisch, poëtisch en toepasbaar.
+        {/* MANIFEST */}
+        <section id="manifest" className="text-center max-w-4xl mx-auto">
+          <h2 className="text-4xl font-semibold">Het Manifest</h2>
+          <p className="mt-6 text-xl leading-relaxed">
+            Het manifest van Terra Vitae Nova beschrijft een nieuwe levenshouding.
+            Een uitnodiging om verantwoordelijkheid te nemen voor hoe we liefhebben,
+            leven, werken en vieren. Poëtisch waar het mag, praktisch waar het moet.
           </p>
-          <button className="mt-6 px-6 py-3 rounded-xl bg-green-600 text-white text-lg hover:bg-green-700 transition">
-            Lees het manifest
+          <div className="mt-10 grid md:grid-cols-3 gap-6">
+            {["Liefde als levenskracht", "De aarde als partner", "De toekomst als verantwoordelijkheid"].map((t) => (
+              <div key={t} className="bg-white rounded-2xl shadow p-6">
+                <h3 className="text-xl font-semibold">{t}</h3>
+              </div>
+            ))}
+          </div>
+          <button className="mt-10 px-8 py-4 rounded-2xl bg-emerald-700 text-white text-lg hover:bg-emerald-800 transition">
+            Lees het volledige manifest
           </button>
         </section>
 
-        <section className="grid md:grid-cols-3 gap-6">
-          {[
-            { title: 'Rituelen', text: 'Momenten om te verbinden, te vieren en los te laten.' },
-            { title: 'Gemeenschap', text: 'Samen leven, leren en liefhebben.' },
-            { title: 'Toekomst', text: 'Een visie voorbij vandaag – regeneratief en liefdevol.' },
-          ].map((item) => (
-            <div key={item.title} className="bg-white rounded-2xl shadow p-6">
-              <h3 className="text-xl font-semibold">{item.title}</h3>
-              <p className="mt-2">{item.text}</p>
+        {/* RITUELEN */}
+        <section className="grid md:grid-cols-3 gap-8">
+          {[{
+            title: 'Rituelen',
+            text: 'Momenten om te markeren wat ertoe doet: overgang, verbinding, dankbaarheid en afscheid.'
+          }, {
+            title: 'Gemeenschap',
+            text: 'Lokale cirkels en ontmoetingen waarin gelijkwaardigheid en zorg centraal staan.'
+          }, {
+            title: 'Levenspraktijk',
+            text: 'Concrete keuzes in wonen, werken, liefhebben en zorgen voor de aarde.'
+          }].map((item) => (
+            <div key={item.title} className="bg-white rounded-3xl shadow-xl p-8">
+              <h3 className="text-2xl font-semibold">{item.title}</h3>
+              <p className="mt-4 text-lg">{item.text}</p>
             </div>
           ))}
         </section>
 
-        <section className="bg-green-700 text-white rounded-3xl p-10 text-center">
-          <h2 className="text-3xl font-semibold">Doe mee</h2>
-          <p className="mt-4 text-lg max-w-2xl mx-auto">
-            Terra Vitae Nova groeit met mensen die voelen dat het anders kan.
-            Zachter. Vrijer. Levendiger.
+        {/* MEEDOEN */}
+        <section id="meedoen" className="bg-emerald-800 text-white rounded-[3rem] p-16 text-center">
+          <h2 className="text-4xl font-semibold">Voel je dat dit resoneert?</h2>
+          <p className="mt-6 text-xl max-w-3xl mx-auto">
+            Terra Vitae Nova groeit organisch. Met mensen die niet alles zeker
+            weten, maar wel bewust willen leven. Je bent welkom — precies zoals je bent.
           </p>
-          <button className="mt-6 px-6 py-3 rounded-xl bg-white text-green-700 text-lg hover:bg-green-100 transition">
-            Sluit je aan
-          </button>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <button className="px-8 py-4 rounded-2xl bg-white text-emerald-800 text-lg hover:bg-emerald-100 transition">
+              Meld je aan
+            </button>
+            <button className="px-8 py-4 rounded-2xl border border-white text-white text-lg hover:bg-emerald-700 transition">
+              Blijf op de hoogte
+            </button>
+          </div>
         </section>
       </main>
 
-      <footer className="mt-24 py-10 text-center text-sm text-gray-600">
+      <footer className="mt-32 py-12 text-center text-sm text-gray-600">
         © {new Date().getFullYear()} Terra Vitae Nova · Liefde voor aarde en leven
       </footer>
     </div>
